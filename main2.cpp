@@ -12,17 +12,23 @@ int main(int argc, char **argv){
 
    */
 
-    /*
-     for(j=0;j<strlen(argv[i]);j++){
-       // Use stack to help with the parentheses
+     for(i=1; i<argc; i++){
+        for(j=0;j<strlen(argv[i]);j++){
+          Stack s;
+          if(argv[i][j] == '[' || argv[i][j] == '{' || argv[i][j] == '('){
+            s.push(argv[i][j]);
+          }
+          else{
+              if(argv[i][j]==']' || argv[i][j]=='}' || argv[i][j] == ')' ){
+                char x = s.pop();
+              }
+          }
+          
+        }
+     }
+     
 
-
-
-
-
-  }
-
-  */
+  
 
 
    return 0;
