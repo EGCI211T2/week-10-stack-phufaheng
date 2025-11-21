@@ -43,23 +43,9 @@ int main(int argc, char **argv){
           
         }
 
-        if(argc == 2){
+        
           if(s.get_size() > 0 && correct == -1){
-            cout<<"too many open"<<endl;
-          }
-          else if(correct == 1){
-            cout<<"correct"<<endl;
-          }
-          else if(correct == 0){
-            cout<<"incorrect"<<endl;
-          }
-          else{
-            
-          }
-        }
-        else{
-          if(s.get_size() > 0 && correct == -1){
-            cout<<"argv "<<i<<" incorrect"<<endl;
+            cout<<"argv "<<i<<" incorrect: too many open parenthesis"<<endl;
           }
           else if(correct == 1){
             cout<<"argv "<<i<<" correct"<<endl;
@@ -70,7 +56,7 @@ int main(int argc, char **argv){
           else{
             
           }
-        }
+        
      }
      
 
