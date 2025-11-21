@@ -8,6 +8,7 @@ class Stack {
 public:
     void push(int);
     int pop();
+    int get_size();
     Stack();
     ~Stack();
 };
@@ -25,9 +26,13 @@ void Stack::push(int x){
     
 }
 
+int Stack::get_size(){
+    return size;
+}
+
 int Stack::pop(){
     if(top == NULL){
-        cout<<"empty stack"<<endl;
+        //cout<<"empty stack"<<endl;
         return -1;
     }
     
@@ -39,6 +44,7 @@ int Stack::pop(){
         // Left missing part for exercises
     delete t;
     size--;
+    //cout<<"pop "<<value<<endl;
     return value;
         //be careful of the empty stack!!!
     
@@ -51,7 +57,7 @@ Stack::Stack(){
     
 }
 Stack::~Stack(){
-    cout<<"clear the stack"<<endl;
+    //cout<<"clear the stack"<<endl;
     while(top != NULL){
         pop();
     } 
